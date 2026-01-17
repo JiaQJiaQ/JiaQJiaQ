@@ -1,0 +1,70 @@
+{
+    "network": {
+        "target_ip": "192.168.0.20",
+        "target_port": 17224,
+        "local_ip": "192.168.0.10",
+        "send_interval": 1.0
+    },
+    "trdp_header": {
+        "protocol_version": [1, 0],
+        "sequence_counter_start": 0,
+        "msg_type": "PD_DATA",
+        "com_id": [120, 86, 52, 18],
+        "etb_topocnt": [1, 0, 0, 0],
+        "op_trn_topocnt": [2, 0, 0, 0],
+        "reply_com_id": [33, 67, 101, 135],
+        "reply_ip_address": [1, 1, 168, 192]
+    },
+    "ocrms_dataset": {
+        "life_signals": {
+            "life_signal_hh": 123,
+            "life_signal_hl": 45,
+            "life_signal_lh": 67,
+            "life_signal_ll": 89
+        },
+        "system_status": {
+            "power_on_request_received": true,
+            "ocrms_on_system_state": true,
+            "power_off_request_received": false,
+            "ocrms_off_system_state": false
+        },
+        "self_test": {
+            "self_test_result": "SELF_TEST_SUCCESSFUL"
+        },
+        "module_failures": {
+            "arcing_detection_failure": false,
+            "video_surveillance_failure": false,
+            "temperature_detection_failure": false,
+            "geometric_parameters_failure": false,
+            "left_vibration_compensation_failure": false,
+            "right_vibration_compensation_failure": false,
+            "ocrms_software_failure": false
+        },
+        "serial_numbers": {
+            "arcing_detection_sn": [65, 82, 67, 48, 49],
+            "video_surveillance_sn": [86, 73, 68, 48, 49],
+            "temperature_detection_sn": [84, 69, 77, 48, 49],
+            "geometric_parameters_sn": [71, 69, 79, 48, 49],
+            "left_vibration_compensation_sn": [76, 86, 67, 48, 49],
+            "right_vibration_compensation_sn": [82, 86, 67, 48, 49]
+        },
+        "alarm_info": {
+            "defect_class_id": [57, 48],
+            "alarm_severity": "MEDIUM",
+            "alarm_location": [64, 66, 15, 0],
+            "track_circuit": [84, 67, 48, 48, 49, 65],
+            "wearing_value": [244, 1],
+            "alarm_location_pmd": 2000000,
+            "track_circuit_pmd": [84, 67, 48, 48, 49, 66]
+        },
+        "software_version": {
+            "software_version_high": 1,
+            "software_version_low": 23
+        }
+    },
+    "logging": {
+        "level": "DEBUG",
+        "file": "../logs/udp_send.log",
+        "console_output": true
+    }
+}
