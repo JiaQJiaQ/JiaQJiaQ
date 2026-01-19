@@ -1,0 +1,9 @@
+Byte Offset,Bit No.,Size,Data Type,Signal ID,Signal Name,Data Description,Value Interpretation,Remark
+0,,8,USINT,API-000,head api-000,,,
+1,,8,USINT,API-001,head api-001,,,
+2,,8,USINT,API-002,head api-002,,,
+3,,8,USINT,API-003,head api-003,,,
+4,,8,USINT,API-004,head api-004,,,
+5,,8,USINT,API-005,head api-005,,,
+6,,8,USINT,API-006,head api-006,,,
+7,,8,USINT,API-007,head api-007,,,
