@@ -1,0 +1,13 @@
+Name,Offset
+Seq,"0	"
+Seq,"1	"
+MsgType,"2	"
+MsgType,"3	"
+"	DatasetLength","4	"
+"	DatasetLength","5	"
+"	Reserved","6	"
+"	Reserved","7	"
+"	Reserved","8	"
+"	Reserved","9	"
+"	HeaderCRC","10	"
+"	HeaderCRC","11	"
