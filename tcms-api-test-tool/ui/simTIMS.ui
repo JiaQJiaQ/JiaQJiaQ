@@ -15,9 +15,27 @@
   </property>
   <widget class="QWidget" name="centralMainWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+    <property name="leftMargin">
+     <number>2</number>
+    </property>
+    <property name="topMargin">
+     <number>2</number>
+    </property>
+    <property name="rightMargin">
+     <number>2</number>
+    </property>
+    <property name="bottomMargin">
+     <number>2</number>
+    </property>
+    <property name="spacing">
+     <number>1</number>
+    </property>
+    <item row="1" column="0">
      <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="0">
+      <property name="spacing">
+       <number>1</number>
+      </property>
+      <item row="1" column="0">
        <layout class="QHBoxLayout" name="topHLayout" stretch="10,1,1,10,1,1">
         <property name="spacing">
          <number>1</number>
@@ -25,14 +43,14 @@
         <item>
          <widget class="QLabel" name="headerFilePathLabel">
           <property name="text">
-           <string>自定义头部文件路径......</string>
+           <string>自定义头部文件路径....</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="openHeaderFilePushBtn">
           <property name="text">
-           <string>选择头部结构</string>
+           <string>选择头部数据结构</string>
           </property>
          </widget>
         </item>
@@ -46,7 +64,7 @@
         <item>
          <widget class="QLabel" name="msgFilePathLabel">
           <property name="text">
-           <string>发送消息结构文件路径.....</string>
+           <string>发送消息结构文件路径....</string>
           </property>
          </widget>
         </item>
@@ -66,10 +84,10 @@
         </item>
        </layout>
       </item>
-      <item row="1" column="0">
-       <layout class="QHBoxLayout" name="center_hLayout" stretch="5,1,5">
+      <item row="2" column="0">
+       <layout class="QHBoxLayout" name="center_hLayout" stretch="1,1">
         <property name="spacing">
-         <number>6</number>
+         <number>1</number>
         </property>
         <property name="sizeConstraint">
          <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
@@ -80,16 +98,37 @@
            <number>1</number>
           </property>
           <item>
-           <layout class="QHBoxLayout" name="sendHLayout" stretch="4,2,6,2">
+           <layout class="QHBoxLayout" name="sendHLayout" stretch="4,3,6,2,2">
+            <property name="spacing">
+             <number>1</number>
+            </property>
             <item>
              <widget class="QCheckBox" name="keepSndCheckBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
-               <string>持续发送     发送间隔ms：</string>
+               <string>持续发送     发送间隔ms:</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLineEdit" name="intervalLineEdit">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>80</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="text">
                <string>1000</string>
               </property>
@@ -109,12 +148,34 @@
              </spacer>
             </item>
             <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Policy::Ignored</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
              <widget class="QPushButton" name="sendMsgBtn">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>179</width>
+                <height>24</height>
+               </size>
               </property>
               <property name="text">
                <string>发送</string>
@@ -124,14 +185,20 @@
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="conBtnHLayout" stretch="0,0,4,1,1">
+           <layout class="QHBoxLayout" name="conBtnHLayout" stretch="4,3,6,2,2">
             <property name="spacing">
-             <number>0</number>
+             <number>1</number>
             </property>
             <item>
              <widget class="QCheckBox" name="hexSndCheckBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
-               <string>16进制发送</string>
+               <string>16进制发送                    </string>
               </property>
               <property name="checked">
                <bool>true</bool>
@@ -140,6 +207,12 @@
             </item>
             <item>
              <widget class="QPushButton" name="clearSendTreePushButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>清空发送内容</string>
               </property>
@@ -166,6 +239,18 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="minimumSize">
+               <size>
+                <width>104</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="text">
                <string>连接</string>
               </property>
@@ -179,6 +264,12 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="minimumSize">
+               <size>
+                <width>75</width>
+                <height>24</height>
+               </size>
+              </property>
               <property name="text">
                <string>断开</string>
               </property>
@@ -188,6 +279,12 @@
           </item>
           <item>
            <widget class="QTreeWidget" name="sendMsgTree">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <column>
              <property name="text">
               <string>offset</string>
@@ -231,25 +328,12 @@
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="localInfoHLayout" stretch="1,4,2,5,2,2">
+           <layout class="QHBoxLayout" name="localInfoHLayout" stretch="1,2,6,2,3">
+            <property name="spacing">
+             <number>1</number>
+            </property>
             <item>
-             <widget class="QLabel" name="netCardLabel">
-              <property name="text">
-               <string>网卡: </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QComboBox" name="netCardComboBox"/>
-            </item>
-            <item>
-             <widget class="QLabel" name="localIpLabel">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
+             <widget class="QLabel" name="sndCountLabel">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -257,56 +341,43 @@
                </size>
               </property>
               <property name="text">
-               <string>本地IP:</string>
+               <string>发送计数：</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="localIpComboBox">
-              <property name="editable">
+             <widget class="QLineEdit" name="sndCountLineEdit">
+              <property name="readOnly">
                <bool>true</bool>
               </property>
-              <property name="currentText">
-               <string>127.0.0.1</string>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
               </property>
-              <property name="insertPolicy">
-               <enum>QComboBox::InsertPolicy::InsertAtTop</enum>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="dateTimeLabel">
+              <property name="text">
+               <string>时间自增offset：</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="localPortLabel">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>接收Port:</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="localPortLineEdit">
-              <property name="text">
-               <string>22000</string>
-              </property>
-             </widget>
+             <widget class="QLineEdit" name="dateTimeLineEdit"/>
             </item>
            </layout>
           </item>
          </layout>
-        </item>
-        <item>
-         <widget class="Line" name="line">
-          <property name="lineWidth">
-           <number>6</number>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Orientation::Vertical</enum>
-          </property>
-         </widget>
         </item>
         <item>
          <layout class="QVBoxLayout" name="right_vLayout" stretch="0,1,20,1">
@@ -316,7 +387,7 @@
           <item>
            <layout class="QHBoxLayout" name="msgCountHLayout" stretch="10,2">
             <property name="spacing">
-             <number>0</number>
+             <number>1</number>
             </property>
             <item>
              <widget class="QLabel" name="recvMsgFilePathLabel">
@@ -327,6 +398,12 @@
             </item>
             <item>
              <widget class="QPushButton" name="openRecvMsgFilePushButton">
+              <property name="minimumSize">
+               <size>
+                <width>179</width>
+                <height>24</height>
+               </size>
+              </property>
               <property name="text">
                <string>选择接收数据结构</string>
               </property>
@@ -335,14 +412,14 @@
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="conStateHLayout" stretch="0,0,6,2,1,1">
+           <layout class="QHBoxLayout" name="conStateHLayout" stretch="0,0,4,2,1,1">
             <property name="spacing">
-             <number>0</number>
+             <number>1</number>
             </property>
             <item>
              <widget class="QCheckBox" name="hexDisplayCheckBox">
               <property name="text">
-               <string>16进制显示</string>
+               <string>16进制显示              </string>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -468,61 +545,10 @@
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="peerInfoHLayout" stretch="1,4,1,1,1,2,1,2">
-            <item>
-             <widget class="QLabel" name="peerIpLabel">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>24</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>对端IP:</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="peerIpLineEdit">
-              <property name="text">
-               <string>127.0.0.1</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="peerPortLabel">
-              <property name="text">
-               <string>接收Port:</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="peerPortLineEdit">
-              <property name="text">
-               <string>21000</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="sndCountLabel">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>24</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>发送计数：</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="sndCountLineEdit">
-              <property name="readOnly">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
+           <layout class="QHBoxLayout" name="peerInfoHLayout" stretch="2,2,12">
+            <property name="spacing">
+             <number>1</number>
+            </property>
             <item>
              <widget class="QLabel" name="revCountLabel">
               <property name="text">
@@ -537,11 +563,235 @@
               </property>
              </widget>
             </item>
+            <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
           </item>
          </layout>
         </item>
        </layout>
+      </item>
+      <item row="4" column="0">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="comBHoriLayout" stretch="2,1,3,1,1,3,1,3,1,1">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item>
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="localIpBLabel">
+            <property name="text">
+             <string>  本地IP-B:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="localIpBComboBox"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="localPortBLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>  接收Port-B:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="localPortBLineEdit">
+            <property name="text">
+             <string>22001</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="peerIpBLabel">
+            <property name="text">
+             <string>  对端IP-B:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="peerIpBLineEdit">
+            <property name="text">
+             <string>127.0.0.1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="peerPortBLabel">
+            <property name="text">
+             <string>  对端Port-B:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="peerPortBLineEdit">
+            <property name="text">
+             <string>21001</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="comAHoriLayout" stretch="2,1,3,1,1,3,1,3,1,1">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item>
+           <widget class="QComboBox" name="networkModeComboBox"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="localIpALabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>  本地IP-A:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="localIpAComboBox">
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <property name="currentText">
+             <string/>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertPolicy::InsertAtTop</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="localPortALabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>  接收Port-A:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="localPortALineEdit">
+            <property name="text">
+             <string>22000</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="peerIpALabel">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>  对端IP-A:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="peerIpALineEdit">
+            <property name="text">
+             <string>127.0.0.1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="peerPortALabel">
+            <property name="text">
+             <string>  接收Port-A:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="peerPortALineEdit">
+            <property name="text">
+             <string>21000</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="0">
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
